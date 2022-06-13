@@ -11,6 +11,6 @@ class MenuItem extends Model
     // Relations
     public function children()
     {
-        return $this->hasMany('\App\Models\MenuItem', 'parent_id', 'id');//->with('children');
+        return $this->hasMany('\App\Models\MenuItem', 'parent_id', 'id')->with('children');
     }
 }
